@@ -37,7 +37,7 @@ const perfiles = [
   {
     nombre: "Juan Cruz",
     apodos: "P3TT0, P3TT0 y P3TT0",
-    descripcion: "Jugador prodmedio de futbol, dice que juega lol y no se calla un ratito",
+    descripcion: "Jugador promedio de futbol, dice que juega lol y no se calla un ratito",
     habilidades: "Callear todo lo que pasa en el mundo, Calzar menos de 40",
     foto: "peto.webp"
   },
