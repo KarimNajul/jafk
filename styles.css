@@ -3,6 +3,12 @@ body {
   background-color: #0f0f0f;
   padding: 30px;
   margin: 0;
+  height: 100%;
+}
+
+.title-container {
+  display: flex;
+  justify-content: center;
 }
 
 .container {
@@ -15,15 +21,18 @@ body {
 }
 
 .card {
-  flex: 1 1 calc(25% - 40px);
-  max-width: calc(25% - 40px);
+  width: 20rem;
   background-color: #111;
-  border-radius: 15px;
+  border-radius: 15px;  
   box-shadow: 0 0 10px #00ffff33;
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   color: #00f7ff;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  padding-bottom: 1rem; /* para que no quede tan justo el texto */
 }
 
 .card:hover {
@@ -32,13 +41,11 @@ body {
 }
 
 .card img {
-  object-fit: cover;
   width: 100%;
-  height: 350px;
-  display: block;
+  height: auto;         /* 👈 esto permite que la altura se ajuste automáticamente */
+  object-fit: contain;  /* 👈 asegura que la imagen se vea entera */
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-  transition: transform 0.3s ease;
 }
 
 .card-content {
@@ -53,27 +60,30 @@ body {
 }
 
 .extra-info {
-  display: none;
-  padding: 0 15px 15px;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 15px;
   font-size: 14px;
   color: #b0f8ff;
+  transition: max-height 0.4s ease, padding 0.4s ease;
 }
 
 .card.expanded .extra-info {
-  display: block;
+  max-height: 500px; /* Ajustar si el contenido es mayor */
+  padding-bottom: 15px;
 }
 
 /* Responsivo */
 @media (max-width: 1024px) {
   .card {
-    flex: 1 1 calc(50% - 40px);
+    flex: 0 0 calc(50% - 40px);
     max-width: calc(50% - 40px);
   }
 }
 
 @media (max-width: 600px) {
   .card {
-    flex: 1 1 100%;
+    flex: 0 0 100%;
     max-width: 100%;
   }
 }

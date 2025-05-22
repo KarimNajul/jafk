@@ -18,7 +18,28 @@ const perfiles = [
     apodos: "Nacho, Nachogath, Ingeniegri",
     descripcion: "Piloto de f1 en la pc, se enoja por respirar",
     habilidades: "desarmarse como un lego, estar siempre enojado, romper ortos en los juegos de autos",
-    foto: "nacho.webp"
+    foto: "nacho.jpeg"
+  },
+  {
+    nombre: "Matias",
+    apodos: "Mati, Capi, Matias, Motitas",
+    descripcion: "El bendito motitas pacifista profesor",
+    habilidades: "Ser el goat",
+    foto: "mati.jpeg"
+  },
+  {
+    nombre: "Johnny Sins",
+    apodos: "Pelado, The Real Escaso Capilare",
+    descripcion: "Adicto al anime y mangas, golpear gente y beber ron",
+    habilidades: "Golpear gente, viajar mucho laburar mucho",
+    foto: "pelao.webp"
+  },
+  {
+    nombre: "Juan Cruz",
+    apodos: "P3TT0, P3TT0 y P3TT0",
+    descripcion: "Jugador prodmedio de futbol, dice que juega lol y no se calla un ratito",
+    habilidades: "Callear todo lo que pasa en el mundo, Calzar menos de 40",
+    foto: "peto.webp"
   },
 ];
 
@@ -27,7 +48,6 @@ const container = document.getElementById("cards-container");
 perfiles.forEach(perfil => {
   const card = document.createElement("div");
   card.className = "card";
-
   card.innerHTML = `
     <img class="img-style" src="imagenes/${perfil.foto}" alt="${perfil.nombre}">
     <div class="card-content">
@@ -41,8 +61,18 @@ perfiles.forEach(perfil => {
   `;
 
   card.addEventListener("click", () => {
+    // Cierra cualquier otra tarjeta expandida
+    document.querySelectorAll('.card.expanded').forEach(otherCard => {
+      if (otherCard !== card) {
+        otherCard.classList.remove('expanded');
+      }
+    });
+
+    // Alterna la tarjeta actual
     card.classList.toggle("expanded");
+
   });
 
   container.appendChild(card);
 });
+
