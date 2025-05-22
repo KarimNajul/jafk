@@ -46,7 +46,7 @@ const perfiles = [
     apodos: "Gaby, Gokox",
     descripcion: "Alcoholico, fan del Minecraft, ex lolero, gordo del valorant",
     habilidades: "Consumir mucho alcohol y estupefacientes. Generador de cobbelstone",
-    foto: "goko.webp"
+    foto: "goko.jpeg"
   },
 ];
 
