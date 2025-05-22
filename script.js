@@ -41,6 +41,13 @@ const perfiles = [
     habilidades: "Callear todo lo que pasa en el mundo, Calzar menos de 40",
     foto: "peto.webp"
   },
+  {
+    nombre: "Gabriel",
+    apodos: "Gaby, Gokox",
+    descripcion: "Alcoholico, fan del Minecraft, ex lolero, gordo del valorant",
+    habilidades: "Consumir mucho alcohol y estupefacientes. Generador de cobbelstone",
+    foto: "goko.webp"
+  },
 ];
 
 const container = document.getElementById("cards-container");
