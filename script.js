@@ -21,8 +21,8 @@ const perfiles = [
     foto: "nacho.jpeg"
   },
   {
-    nombre: "Matias",
-    apodos: "Mati, Capi, Matias, Motitas",
+    nombre: "Matías",
+    apodos: "Mati, Moty, Capi, Matias, Motitas",
     descripcion: "El bendito motitas pacifista profesor",
     habilidades: "Ser el goat",
     foto: "mati.jpeg"
